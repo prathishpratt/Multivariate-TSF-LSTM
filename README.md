@@ -8,17 +8,23 @@ Series Forecasting with LSTM
 - dataset: https://finance.yahoo.com/quote/GE/history/
 
 <pre>
-  From GE's historical price, we take a sliding window of 14 days and 5 features to predict the next day's opening price.
+  From GE's historical price, we take a sliding window of 14 days and 5 features to predict the 
+  next day's opening price.
 
   We have used LSTM as it is important to preserve the sequence in this use case. 
-  So the input shape will be (x, 14, 5). That is for every row, we will have a (14,5) matrix as input.
-  Also, Standard Scaling has been used for the 5 columns and then inverse transformed back after the prediction.
   
-  ![Prediction of one day](https://github.com/prathishpratt/Multivariate-TSF-LSTM/assets/64516584/7ea8b9df-9e19-40fc-8285-28da941f8314)
-
-  We can only predict one day after the data, since it is multivariate, if we need to predict the next following days we need to predict all the 5 inputs.
+  So the input shape will be (x, 14, 5). That is for every row, we will have a (14,5) matrix as input.
+  
+  Also, Standard Scaling has been used for the 5 columns and then inverse transformed back 
+  after the prediction.
+</pre>
+![Prediction of one day](https://github.com/prathishpratt/Multivariate-TSF-LSTM/assets/64516584/7ea8b9df-9e19-40fc-8285-28da941f8314)
+<pre>
+  We can only predict one day after the data, since it is multivariate, if we need to 
+  predict the next following days we need to predict all the 5 inputs.
   
 </pre>
+
 
 ### Benchmarking
 
